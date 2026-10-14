@@ -1,37 +1,74 @@
 const menuToggle = document.getElementById("menuToggle");
 const nav = document.getElementById("nav");
 
+// Mobile navigation
 menuToggle.addEventListener("click", () => {
-  const isOpen = nav.classList.toggle("open");
-  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  const open = nav.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded", String(open));
+  menuToggle.setAttribute(
+    "aria-label",
+    open ? "Close navigation" : "Open navigation"
+  );
+  menuToggle.textContent = open ? "✕" : "☰";
 });
 
 nav.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => nav.classList.remove("open"));
+  link.addEventListener("click", () => {
+    nav.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Open navigation");
+    menuToggle.textContent = "☰";
+      });
 });
 
-document.getElementById("year").textContent = new Date().getFullYear();
+// Automatic copyright year
+document.getElementById("year").textContent =
+  new Date().getFullYear();
 
-// Demo tracking: this does not connect to a live courier system.
+// Demo shipment tracking
 document.getElementById("trackingForm").addEventListener("submit", event => {
   event.preventDefault();
 
-  const trackingNumber = document
+  const reference = document
     .getElementById("trackingNumber").value.trim();
 
   const result = document.getElementById("trackingResult");
 
-  if (!trackingNumber) {
-    result.textContent = "Please enter a tracking number.";
+  if (!reference) {
+    result.textContent = "Please enter a tracking reference.";
     return;
   }
-
   result.textContent =
-    `Tracking number ${trackingNumber} received. ` +
-    "Live tracking is not connected yet. Please contact our team for an update.";
+    "Reference " + reference +
+    " is ready for an enquiry. Live tracking is not connected yet.";
+
+  // Prepare an email enquiry using the entered reference.
+  const recipient = "info@infinitylogistics360.co.za";
+  const subject = encodeURIComponent(
+    "Shipment tracking enquiry: " + reference
+  );
+  const body = encodeURIComponent(
+    "Hello Infinity Logistics 360,\n\n" +
+    "Please provide an update for shipment reference: " +
+    reference + ".\n\nThank you."
+  );
+
+  const emailLink =
+    "mailto:" + recipient +
+    "?subject=" + subject +
+    "&body=" + body;
+    const link = document.createElement("a");
+  link.href = emailLink;
+  link.textContent = " Email our team about this shipment";
+  link.className = "text-link";
+  link.style.display = "block";
+  link.style.marginTop = "8px";
+
+  result.appendChild(document.createElement("br"));
+  result.appendChild(link);
 });
 
-// Demo quote form: opens an email draft on the customer's device.
+// Quote request via the customer's email application
 document.getElementById("quoteForm").addEventListener("submit", event => {
   event.preventDefault();
 
@@ -39,19 +76,28 @@ document.getElementById("quoteForm").addEventListener("submit", event => {
   if (!form.reportValidity()) return;
 
   const data = new FormData(form);
-  const recipient = "info@yourcompany.co.za"; // Replace with your email.
 
-  const subject = encodeURIComponent("New Logistics Quote Request");
-  const body = encodeURIComponent(
-    `Name: ${data.get("name")}\n` +
-    `Email: ${data.get("email")}\n` +
-    `Service: ${data.get("service")}\n\n` +
-    `Shipment details:\n${data.get("message")}`
+  // Replace with your actual business email.
+  const recipient = "info@infinitylogistics360.co.za";
+
+  const subject = encodeURIComponent(
+    "Quote Request - Infinity Logistics 360"
   );
 
+  const body = encodeURIComponent(
+    "INFINITY LOGISTICS 360 - QUOTE REQUEST\n\n" +
+    "Name: " + data.get("name") + "\n" +
+    "Email: " + data.get("email") + "\n" +
+    "Phone: " + (data.get("phone") || "Not provided") + "\n" +
+    "Service: " + data.get("service") + "\n\n" +
+    "Shipment details:\n" + data.get("message")
+  );
   document.getElementById("quoteResult").textContent =
-    "Opening your email application. Please review and send your request.";
+    "Your email application will open. Review and send your request.";
 
   window.location.href =
-    `mailto:${recipient}?subject=${subject}&body=${body}`;
+    "mailto:" + recipient +
+    "?subject=" + subject +
+    "&body=" + body;
 });
+   
