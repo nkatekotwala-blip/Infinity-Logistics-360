@@ -4,181 +4,242 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Reliable freight, transport, warehousing and logistics solutions.">
-  <title>SwiftLogistics | Moving Business Forward</title>
+  <meta name="theme-color" content="#080b10">
+  <meta name="description" content="Infinity Logistics 360 — Limitless Reliability. Transport, freight, distribution and logistics solutions.">
+  <title>Infinity Logistics 360 | Limitless Reliability</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="header">
-  <a href="#" class="logo">Swift<span>Logistics</span></a>
-  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+  <a class="brand" href="#home" aria-label="Infinity Logistics 360 home">
+    <img src="logo.jpg" alt="Infinity Logistics 360 — Limitless Reliability">
+  </a>
+
+  <button class="menu-toggle" id="menuToggle"
+    aria-label="Open navigation" aria-expanded="false">☰</button>
+
   <nav id="nav">
     <a href="#home">Home</a>
     <a href="#services">Services</a>
     <a href="#about">About Us</a>
     <a href="#tracking">Track Shipment</a>
-    <a href="#contact" class="nav-btn">Contact Us</a>
+    <a class="nav-cta" href="#contact">Get a Quote</a>
   </nav>
 </header>
 
 <main>
-<section class="hero" id="home">
-  <div class="hero-content">
-    <p class="eyebrow">YOUR TRUSTED LOGISTICS PARTNER</p>
-    <h1>Moving Your Business <span>Forward.</span></h1>
-    <p class="hero-text">
-      Reliable transport, freight and logistics solutions
-      designed to keep your business moving.
-    </p>
-    <div class="hero-actions">
-      <a class="btn btn-orange" href="#contact">Get a Free Quote</a>
-      <a class="btn btn-outline" href="#services">Explore Services</a>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <span class="eyebrow">INFINITY LOGISTICS 360</span>
+      <h1>Limitless <span>Reliability.</span></h1>
+      <p class="hero-lead">
+        Connecting businesses, moving cargo and delivering logistics
+        solutions you can depend on.
+      </p>
+      <div class="hero-buttons">
+        <a href="#contact" class="button button-blue">Request a Quote ↗</a>
+        <a href="#services" class="button button-outline">Explore Our Services</a>
+      </div>
+      <div class="hero-points">
+        <span>✓ Customer-focused</span>
+        <span>✓ Reliable solutions</span>
+        <span>✓ Professional service</span>
+      </div>
     </div>
-    <div class="stats">
-      <div><strong>24/7</strong><small>Support</small></div>
-      <div><strong>Reliable</strong><small>Delivery Solutions</small></div>
-      <div><strong>Global</strong><small>Logistics Network</small></div>
+  </section>
+
+  <section class="trust-strip">
+    <div><strong>360°</strong><span>Logistics Perspective</span></div>
+    <div><strong>Reliable</strong><span>Service Commitment</span></div>
+    <div><strong>Connected</strong><span>Supply Chain Solutions</span></div>
+  </section>
+
+  <section class="section tracking" id="tracking">
+    <div>
+      <span class="eyebrow">SHIPMENT TRACKING</span>
+      <h2>Where Is Your Cargo?</h2>
+      <p>Enter your shipment reference to request a tracking update.</p>
     </div>
-  </div>
-</section>
-
-<section class="tracking section" id="tracking">
-  <div>
-    <p class="eyebrow">SHIPMENT VISIBILITY</p>
-    <h2>Track Your Shipment</h2>
-    <p>Enter your tracking number to check your shipment status.</p>
-  </div>
-  <form id="trackingForm" class="tracking-form">
-    <input id="trackingNumber" type="text"
-      placeholder="Enter tracking number" required>
-    <button class="btn btn-orange" type="submit">Track Now →</button>
-  </form>
-  <p id="trackingResult" class="result" role="status"></p>
-  <p class="notice">Demo tracking only. Connect a real tracking API to display live shipment updates.</p>
-</section>
-
-<section class="section services" id="services">
-  <div class="section-heading">
-    <p class="eyebrow">WHAT WE DO</p>
-    <h2>Logistics Solutions Built Around You</h2>
-    <p>From first mile to final destination, we help keep your supply chain moving.</p>
-  </div>
-  <div class="service-grid">
-    <article class="service-card">
-      <div class="service-icon">🚚</div>
-      <h3>Road Freight</h3>
-      <p>Dependable transportation for local, regional and long-distance deliveries.</p>
-    </article>
-    <article class="service-card">
-      <div class="service-icon">📦</div>
-      <h3>Cargo & Distribution</h3>
-      <p>Flexible cargo handling and distribution solutions for businesses of every size.</p>
-    </article>
-    <article class="service-card">
-      <div class="service-icon">🏭</div>
-      <h3>Warehousing</h3>
-      <p>Organized storage and inventory handling to support your operations.</p>
-    </article>
-    <article class="service-card">
-      <div class="service-icon">⚡</div>
-      <h3>Express Delivery</h3>
-      <p>Time-sensitive delivery options for shipments that need extra attention.</p>
-    </article>
-    <article class="service-card">
-      <div class="service-icon">🚢</div>
-      <h3>Freight Forwarding</h3>
-      <p>Coordinated freight movements and shipment planning across transport networks.</p>
-    </article>
-    <article class="service-card">
-      <div class="service-icon">🤝</div>
-      <h3>Supply Chain Support</h3>
-      <p>Practical logistics coordination to help streamline your business deliveries.</p>
-    </article>
-  </div>
-</section>
-
-<section class="about section" id="about">
-  <div class="about-image" role="img" aria-label="Freight truck on a highway"></div>
-  <div class="about-content">
-    <p class="eyebrow">ABOUT SWIFTLOGISTICS</p>
-    <h2>Delivering More Than Just Cargo</h2>
-    <p>We believe logistics is about more than moving goods. It is about building trust, meeting commitments and helping businesses grow.</p>
-    <p>Our goal is to provide dependable, transparent and customer-focused transport solutions tailored to your needs.</p>
-    <ul>
-      <li>✓ Customer-focused service</li>
-      <li>✓ Flexible transport solutions</li>
-      <li>✓ Clear communication</li>
-      <li>✓ Commitment to reliability</li>
-    </ul>
-    <a href="#contact" class="btn btn-orange">Work With Us</a>
-  </div>
-</section>
-
-<section class="cta">
-  <p class="eyebrow">LET'S MOVE FORWARD</p>
-  <h2>Have Cargo That Needs to Move?</h2>
-  <p>Talk to our team about your next shipment.</p>
-  <a href="#contact" class="btn btn-orange">Request a Quote →</a>
-</section>
-
-<section class="section contact" id="contact">
-  <div class="section-heading">
-    <p class="eyebrow">GET IN TOUCH</p>
-    <h2>Let's Discuss Your Logistics Needs</h2>
-    <p>Send us your requirements and we'll be ready to assist.</p>
-  </div>
-  <div class="contact-grid">
-    <div class="contact-info">
-      <h3>Contact Information</h3>
-      <p>📍 Johannesburg, South Africa</p>
-      <p>📞 +27 00 000 0000</p>
-      <p>✉️ info@yourcompany.co.za</p>
-      <p>🕒 Monday – Friday, 08:00 – 17:00</p>
-      <p class="notice">Replace these sample details with your actual business contacts.</p>
-    </div>
-    <form id="quoteForm" class="quote-form">
-      <label for="name">Full Name</label>
-      <input id="name" name="name" placeholder="Your full name" required>
-
-      <label for="email">Email Address</label>
-      <input id="email" name="email" type="email" placeholder="you@example.com" required>
-
-      <label for="service">Service Required</label>
-      <select id="service" name="service" required>
-        <option value="">Select a service</option>
-        <option>Road Freight</option>
-        <option>Cargo & Distribution</option>
-        <option>Warehousing</option>
-        <option>Express Delivery</option>
-        <option>Freight Forwarding</option>
-        <option>Other</option>
-      </select>
-
-      <label for="message">Shipment Details</label>
-      <textarea id="message" name="message" rows="4"
-        placeholder="Collection point, destination, cargo type and approximate weight"
-        required></textarea>
-
-      <button type="submit" class="btn btn-orange">Request My Quote →</button>
-      <p id="quoteResult" class="result" role="status"></p>
-      <p class="notice">This demo opens an email draft; it does not send or store your information directly.</p>
+    <form id="trackingForm" class="tracking-form">
+      <label for="trackingNumber">Tracking or reference number</label>
+      <div class="input-action">
+        <input id="trackingNumber" name="trackingNumber"
+          placeholder="e.g. IL360-10001" required>
+        <button class="button button-blue" type="submit">Track Shipment</button>
+      </div>
+      <p id="trackingResult" class="form-result" role="status"></p>
+      <p class="small-note">
+        Live tracking is not yet connected. This demo helps customers
+        prepare a tracking enquiry.
+      </p>
     </form>
-  </div>
-</section>
+  </section>
+
+  <section class="section services" id="services">
+    <div class="section-heading">
+      <span class="eyebrow">OUR SERVICES</span>
+      <h2>Logistics Without Limits</h2>
+      <p>Practical logistics solutions to help keep your business moving.</p>
+    </div>
+
+    <div class="service-grid">
+      <article class="service-card">
+        <div class="service-icon">↗</div>
+        <h3>Road Freight & Transport</h3>
+        <p>Transport solutions for business cargo, planned deliveries and road freight requirements.</p>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">▣</div>
+        <h3>Cargo & Distribution</h3>
+        <p>Coordinated cargo movements and distribution support for your business.</p>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">⌂</div>
+        <h3>Warehousing</h3>
+        <p>Storage and inventory support to help your supply chain operate efficiently.</p>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">⇄</div>
+        <h3>Freight Forwarding</h3>
+        <p>Freight coordination and shipment planning for domestic and international needs.</p>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">➜</div>
+        <h3>Express Delivery</h3>
+        <p>Delivery options for time-sensitive consignments and urgent business requirements.</p>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">◎</div>
+        <h3>Logistics Consulting</h3>
+        <p>Discuss your transport and distribution needs with our team to explore a suitable solution.</p>
+      </article>
+    </div>
+    <p class="small-note service-disclaimer">
+      Services can be edited to reflect the capabilities Infinity Logistics 360 currently offers.
+    </p>
+  </section>
+
+  <section class="about section" id="about">
+    <div class="about-logo">
+      <img src="logo.jpg" alt="Infinity Logistics 360 company logo">
+      <span>LIMITLESS RELIABILITY</span>
+    </div>
+    <div class="about-content">
+      <span class="eyebrow">ABOUT OUR COMPANY</span>
+      <h2>More Than Logistics. A Commitment to Reliability.</h2>
+      <p>
+        Infinity Logistics 360 is built around a simple principle:
+        dependable logistics start with understanding each customer's needs.
+      </p>
+      <p>
+        Our goal is to help businesses move goods efficiently through
+        professional service, clear communication and practical transport solutions.
+      </p>
+      <a href="#contact" class="text-link">Let's discuss your requirements →</a>
+    </div>
+  </section>
+
+  <section class="cta">
+    <span class="eyebrow">YOUR LOGISTICS PARTNER</span>
+    <h2>Let's Move Your Business Forward.</h2>
+    <p>Tell us what you need to move, where it needs to go, and how we can help.</p>
+    <a href="#contact" class="button button-blue">Get in Touch ↗</a>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="section-heading">
+      <span class="eyebrow">CONTACT US</span>
+      <h2>Request a Logistics Quote</h2>
+      <p>Share your requirements so we can discuss the right solution for your shipment.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-panel">
+        <img src="logo.jpg" alt="Infinity Logistics 360" class="contact-logo">
+        <h3>Infinity Logistics 360</h3>
+        <p class="tagline">Limitless Reliability.</p>
+        <div class="contact-detail">
+          <span>LOCATION</span>
+          <p>Johannesburg, South Africa</p>
+        </div>
+        <div class="contact-detail">
+          <span>EMAIL</span>
+          <p>Replace with your business email</p>
+        </div>
+        <div class="contact-detail">
+          <span>PHONE / WHATSAPP</span>
+          <p>Replace with your business number</p>
+        </div>
+        <p class="small-note">
+          Update the sample contact details before publishing.
+        </p>
+      </div>
+
+      <form id="quoteForm" class="quote-form">
+        <div class="field">
+          <label for="name">Full name *</label>
+          <input id="name" name="name" autocomplete="name"
+            placeholder="Your full name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email address *</label>
+          <input id="email" name="email" type="email"
+            autocomplete="email" placeholder="you@example.com" required>
+        </div>
+        <div class="field">
+          <label for="phone">Phone number</label>
+          <input id="phone" name="phone" type="tel"
+            autocomplete="tel" placeholder="+27 ...">
+        </div>
+        <div class="field">
+          <label for="service">Service required *</label>
+          <select id="service" name="service" required>
+            <option value="">Choose a service</option>
+            <option>Road Freight & Transport</option>
+            <option>Cargo & Distribution</option>
+            <option>Warehousing</option>
+            <option>Freight Forwarding</option>
+            <option>Express Delivery</option>
+            <option>Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Shipment details *</label>
+          <textarea id="message" name="message" rows="5"
+            placeholder="Collection point, destination, cargo type, quantity and approximate weight"
+            required></textarea>
+        </div>
+        <button class="button button-blue submit-button" type="submit">
+          Prepare Quote Request ↗
+        </button>
+        <p id="quoteResult" class="form-result" role="status"></p>
+        <p class="small-note">
+          This demo prepares an email in your email application. It does not
+          automatically send or store submissions.
+        </p>
+      </form>
+    </div>
+  </section>
 </main>
 
 <footer class="footer">
-  <a href="#home" class="logo">Swift<span>Logistics</span></a>
-  <p>Reliable logistics. Stronger connections. Better business.</p>
+  <a href="#home" class="footer-brand">
+    <img src="logo.jpg" alt="Infinity Logistics 360">
+  </a>
+  <p>Limitless Reliability.</p>
   <div class="footer-links">
+    <a href="#home">Home</a>
     <a href="#services">Services</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </div>
-  <p class="copyright">© <span id="year"></span> SwiftLogistics. All rights reserved.</p>
+  <p class="copyright">
+    © <span id="year"></span> Infinity Logistics 360. All rights reserved.
+  </p>
 </footer>
 
 <script src="script.js"></script>
 </body>
 </html>
+
